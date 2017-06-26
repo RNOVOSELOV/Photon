@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="app_name" translatable="false">Photon</string>
+
+    <!-- FONTS -->
+    <string name="roboto_regular" translatable="false">sans-serif</string>
+    <string name="roboto_light" translatable="false">sans-serif-light</string>
+    <string name="roboto_condensed" translatable="false">sans-serif-condensed</string>
+    <string name="roboto_black" translatable="false">sans-serif-black</string>
+    <string name="roboto_thin" translatable="false">sans-serif-thin</string>
+    <string name="roboto_medium" translatable="false">sans-serif-medium</string>
+
+    <string name="app_name_splash_text">Фотон</string>
+    <string name="app_description_splash_text">Онлайн-галерея фуд-фотографии.\nДля вдохновления и обучения.</string>
+
+    <!-- BottomNavigationView -->
+    <string name="bottom_bar_main">Главная</string>
+    <string name="bottom_bar_profile">Профиль</string>
+    <string name="bottom_bar_upload">Загрузить</string>
+
+    <!-- Errors -->
+    <string name="error_api">Ошибка API</string>
+    <string name="error_api_with_code">Ошибка API. Код ошибки:</string>
+    <string name="error_network">Интернет недоступен. Попробуйте позже.</string>
+    <string name="error_no_data">Нет данных для отображения.</string>
+    <string name="error_socket">Не удалось установить соединение с сервером.</string>
+
+    <!-- PhotocardsScreen -->
+    <string name="photocard_album">Альбомы</string>
+    <string name="photocard_card">Карты</string>
+
+</resources>

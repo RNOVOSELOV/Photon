@@ -1,0 +1,66 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--FONTS-->
+    <dimen name="font_little_8">8sp</dimen>
+    <dimen name="font_10">10sp</dimen>
+    <dimen name="font_small_12">12sp</dimen>
+    <dimen name="font_normal_14">14sp</dimen>
+    <dimen name="font_increased_16">16sp</dimen>
+    <dimen name="font_18">18sp</dimen>
+    <dimen name="font_large_20">20sp</dimen>
+    <dimen name="font_enlarge_24">24sp</dimen>
+    <dimen name="font_28">28sp</dimen>
+    <dimen name="font_32">32sp</dimen>
+    <dimen name="font_medium_40">40sp</dimen>
+
+    <!--SPACES-->
+    <dimen name="spacing_zero_0">0dp</dimen>
+    <dimen name="spacing_micro_2">2dp</dimen>
+    <dimen name="spacing_small_8">8dp</dimen>
+    <dimen name="spacing_little_16">16dp</dimen>
+    <dimen name="spacing_normal_24">24dp</dimen>
+    <dimen name="spacing_increase_28">28dp</dimen>
+    <dimen name="spacing_bigger_32">32dp</dimen>
+    <dimen name="spacing_medium_40">40dp</dimen>
+    <dimen name="spacing_large_48">48dp</dimen>
+    <dimen name="spacing_large_56">56dp</dimen>
+    <dimen name="spacing_big_64">64dp</dimen>
+    <dimen name="spacing_great_72">72dp</dimen>
+    <dimen name="spacing_greatest">240dp</dimen>
+
+    <!-- MARGINS -->
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_6">6dp</dimen>
+    <dimen name="margin_little_8">8dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_small_16">16dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_normal_24">24dp</dimen>
+    <dimen name="margin_increased_32">32dp</dimen>
+    <dimen name="margin_34">34dp</dimen>
+    <dimen name="margin_36">36dp</dimen>
+    <dimen name="margin_medium_40">40dp</dimen>
+    <dimen name="margin_large_48">48dp</dimen>
+    <dimen name="margin_enlarge_56">56dp</dimen>
+    <dimen name="margin_big_64">64dp</dimen>
+    <dimen name="margin_great_72">72dp</dimen>
+
+    <!-- PADDINGS -->
+    <dimen name="padding_little_12">12dp</dimen>
+    <dimen name="padding_small_4">4dp</dimen>
+    <dimen name="padding_normal_8">8dp</dimen>
+    <dimen name="padding_increased_12">12dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="padding_large_24">24dp</dimen>
+    <dimen name="padding_big_32">32dp</dimen>
+    <dimen name="padding_44">44dp</dimen>
+    <dimen name="padding_medium_56">56dp</dimen>
+
+    <dimen name="bottombar_height">56dp</dimen>
+    <dimen name="approx_rating_card_width">65dp</dimen>
+    <dimen name="avatar_size">56dp</dimen>
+
+</resources>
