@@ -1,6 +1,8 @@
-package xyz.rnovoselov.photon.ui.screens;
+package xyz.rnovoselov.photon.ui.screens.splash;
 
 import com.squareup.leakcanary.RefWatcher;
+
+import java.util.Random;
 
 import dagger.Provides;
 import flow.Flow;
@@ -15,6 +17,7 @@ import xyz.rnovoselov.photon.mvp.presenters.AbstractPresenter;
 import xyz.rnovoselov.photon.mvp.presenters.RootPresenter;
 import xyz.rnovoselov.photon.ui.RootActivity;
 import xyz.rnovoselov.photon.ui.screens.main.MainScreen;
+import xyz.rnovoselov.photon.ui.screens.third.ThirdScreen;
 
 /**
  * Created by roman on 29.06.17.
@@ -79,6 +82,10 @@ public class SplashScreen extends AbstractScreen<RootActivity.RootComponent> {
         public void onNextClick() {
             Flow.get(getView()).set(new MainScreen());
 
+        }
+
+        public void onThirdClick() {
+            Flow.get(getView()).set(new ThirdScreen(new Random().nextInt()));
         }
     }
 

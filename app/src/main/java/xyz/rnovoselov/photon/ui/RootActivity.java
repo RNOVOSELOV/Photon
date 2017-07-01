@@ -28,7 +28,7 @@ import xyz.rnovoselov.photon.mvp.models.AccountModel;
 import xyz.rnovoselov.photon.mvp.presenters.RootPresenter;
 import xyz.rnovoselov.photon.mvp.views.IRootView;
 import xyz.rnovoselov.photon.mvp.views.IView;
-import xyz.rnovoselov.photon.ui.screens.SplashScreen;
+import xyz.rnovoselov.photon.ui.screens.splash.SplashScreen;
 
 public class RootActivity extends AppCompatActivity implements IRootView,
         BottomNavigationView.OnNavigationItemSelectedListener {

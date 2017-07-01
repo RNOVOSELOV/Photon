@@ -1,10 +1,10 @@
-package xyz.rnovoselov.photon.ui.screens.main;
+package xyz.rnovoselov.photon.ui.screens.third;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.widget.TextView;
 
 import butterknife.BindView;
-import butterknife.OnClick;
 import xyz.rnovoselov.photon.R;
 import xyz.rnovoselov.photon.di.DaggerService;
 import xyz.rnovoselov.photon.mvp.views.AbstractView;
@@ -13,9 +13,12 @@ import xyz.rnovoselov.photon.mvp.views.AbstractView;
  * Created by roman on 30.06.17.
  */
 
-public class MainView extends AbstractView<MainScreen.MainPresenter> {
+public class ThirdView extends AbstractView<ThirdScreen.ThirdPresenter> {
 
-    public MainView(Context context, AttributeSet attrs) {
+    @BindView(R.id.ident)
+    TextView identificatorTv;
+
+    public ThirdView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
@@ -26,11 +29,10 @@ public class MainView extends AbstractView<MainScreen.MainPresenter> {
 
     @Override
     protected void initDagger(Context context) {
-        DaggerService.<MainScreen.Component>getDaggerComponent(context).inject(this);
+        DaggerService.<ThirdScreen.Component>getDaggerComponent(context).inject(this);
     }
 
-    @OnClick(R.id.btn_third)
-    void onThirdClick(){
-        mPresenter.onThirdClick();
+    public void showData(int ident) {
+        identificatorTv.setText(String.valueOf(ident));
     }
 }
