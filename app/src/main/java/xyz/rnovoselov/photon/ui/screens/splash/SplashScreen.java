@@ -61,8 +61,6 @@ public class SplashScreen extends AbstractScreen<RootActivity.RootComponent> {
 
         RefWatcher getRefWatcher();
 
-        SplashModel getSplashModel();
-
         RootPresenter getRootPresenter();
     }
 

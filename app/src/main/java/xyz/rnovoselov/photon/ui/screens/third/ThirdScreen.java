@@ -11,14 +11,14 @@ import xyz.rnovoselov.photon.flow.Screen;
 import xyz.rnovoselov.photon.mortar.DaggerScope;
 import xyz.rnovoselov.photon.mvp.models.SplashModel;
 import xyz.rnovoselov.photon.mvp.presenters.AbstractPresenter;
-import xyz.rnovoselov.photon.ui.screens.splash.SplashScreen;
+import xyz.rnovoselov.photon.ui.RootActivity;
 
 /**
  * Created by roman on 30.06.17.
  */
 
 @Screen(R.layout.screen_third)
-public class ThirdScreen extends AbstractScreen<SplashScreen.Component> {
+public class ThirdScreen extends AbstractScreen<RootActivity.RootComponent> {
 
     private int identificator;
 
@@ -46,10 +46,10 @@ public class ThirdScreen extends AbstractScreen<SplashScreen.Component> {
     }
 
     @Override
-    public Object createScreenComponent(SplashScreen.Component parentComponent) {
+    public Object createScreenComponent(RootActivity.RootComponent parentComponent) {
         return DaggerThirdScreen_Component.builder()
                 .module(new Module())
-                .component(parentComponent)
+                .rootComponent(parentComponent)
                 .build();
     }
 
@@ -60,9 +60,15 @@ public class ThirdScreen extends AbstractScreen<SplashScreen.Component> {
         ThirdPresenter provideMainPresenter() {
             return new ThirdPresenter(identificator);
         }
+
+        @Provides
+        @DaggerScope(ThirdScreen.class)
+        SplashModel provideSplashModel() {
+            return new SplashModel();
+        }
     }
 
-    @dagger.Component(dependencies = SplashScreen.Component.class, modules = ThirdScreen.Module.class)
+    @dagger.Component(dependencies = RootActivity.RootComponent.class, modules = ThirdScreen.Module.class)
     @DaggerScope(ThirdScreen.class)
     public interface Component {
         void inject(ThirdPresenter presenter);

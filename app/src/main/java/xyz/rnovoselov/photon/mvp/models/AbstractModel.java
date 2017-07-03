@@ -5,6 +5,7 @@ import javax.inject.Inject;
 
 import xyz.rnovoselov.photon.data.DataProvider;
 import xyz.rnovoselov.photon.di.DaggerService;
+
 import xyz.rnovoselov.photon.di.components.DaggerModelComponent;
 import xyz.rnovoselov.photon.di.components.ModelComponent;
 import xyz.rnovoselov.photon.di.modules.ModelModule;

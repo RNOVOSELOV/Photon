@@ -1,7 +1,5 @@
 package xyz.rnovoselov.photon.ui.screens.main;
 
-import android.support.design.widget.FloatingActionButton;
-
 import java.util.Random;
 
 import dagger.Provides;
@@ -14,6 +12,7 @@ import xyz.rnovoselov.photon.flow.Screen;
 import xyz.rnovoselov.photon.mortar.DaggerScope;
 import xyz.rnovoselov.photon.mvp.models.SplashModel;
 import xyz.rnovoselov.photon.mvp.presenters.AbstractPresenter;
+import xyz.rnovoselov.photon.ui.RootActivity;
 import xyz.rnovoselov.photon.ui.screens.splash.SplashScreen;
 import xyz.rnovoselov.photon.ui.screens.third.ThirdScreen;
 
@@ -22,13 +21,13 @@ import xyz.rnovoselov.photon.ui.screens.third.ThirdScreen;
  */
 
 @Screen(R.layout.screen_main)
-public class MainScreen extends AbstractScreen<SplashScreen.Component> {
+public class MainScreen extends AbstractScreen<RootActivity.RootComponent> {
 
     @Override
-    public Object createScreenComponent(SplashScreen.Component parentComponent) {
+    public Object createScreenComponent(RootActivity.RootComponent parentComponent) {
         return DaggerMainScreen_Component.builder()
                 .module(new Module())
-                .component(parentComponent)
+                .rootComponent(parentComponent)
                 .build();
     }
 
@@ -39,9 +38,15 @@ public class MainScreen extends AbstractScreen<SplashScreen.Component> {
         MainPresenter provideMainPresenter() {
             return new MainPresenter();
         }
+
+        @Provides
+        @DaggerScope(MainScreen.class)
+        SplashModel provideSplashModel() {
+            return new SplashModel();
+        }
     }
 
-    @dagger.Component(dependencies = SplashScreen.Component.class, modules = MainScreen.Module.class)
+    @dagger.Component(dependencies = RootActivity.RootComponent.class, modules = MainScreen.Module.class)
     @DaggerScope(MainScreen.class)
     public interface Component {
         void inject(MainPresenter presenter);
